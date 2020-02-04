@@ -1,0 +1,20 @@
+<h3>Student Form</h3>
+
+<%= form_tag new_student_path do %>
+  <label>First_name:</label><br>
+  <%= text_field_tag :'student[first_name]' %><br>
+ 
+  <label>Last_name:</label><br>
+  <%= text_area_tag :'student[last_name]' %><br>
+ 
+  <input type="submit" value="Submit Student">
+<% end %>
+ 
+RODEO 
+ 
+<% if $params %>
+
+<%= $params[:student][:first_name] %>
+<%= $params[:student][:last_name] %>
+
+<% end %>
